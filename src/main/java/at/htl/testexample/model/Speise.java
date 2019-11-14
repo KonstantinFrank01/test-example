@@ -1,12 +1,15 @@
 package at.htl.testexample.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "MY_SPEISE")
+@NamedQueries({
+        @NamedQuery(
+                name = "Speise.getAll",
+                query = "select s from Speise s"
+        )
+})
 public class Speise {
 
     @Id @GeneratedValue
