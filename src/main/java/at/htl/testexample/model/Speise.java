@@ -15,6 +15,8 @@ public class Speise {
     @Id @GeneratedValue
     private Long id;
     private String speise;
+    @ManyToOne
+    private Wochentag wochentag;
 
     public Speise() {
     }
@@ -42,5 +44,13 @@ public class Speise {
     @Override
     public String toString() {
         return String.format("%d: %s", id, speise);
+    }
+
+    public Wochentag getWochentag() {
+        return wochentag;
+    }
+
+    public void setWochentag(Wochentag wochentag) {
+        this.wochentag = wochentag;
     }
 }
