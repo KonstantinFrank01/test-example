@@ -21,8 +21,9 @@ public class Speise {
     public Speise() {
     }
 
-    public Speise(String speise) {
+    public Speise(String speise, Wochentag wochentag) {
         this.speise = speise;
+        this.wochentag = wochentag;
     }
 
     public Long getId() {
